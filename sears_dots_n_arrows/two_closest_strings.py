@@ -1,5 +1,3 @@
-
-
 def completeHamming(s):
     a = ''
     for c in s:
