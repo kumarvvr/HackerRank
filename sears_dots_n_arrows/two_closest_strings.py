@@ -8,16 +8,12 @@ def completeHamming(s):
     return a
 
 def convertHamming(s,k):
-    if k == 0:
-        # No changes to be done.
-        return s
-    if(len(s) == k):
-        # All characters have to be changed
-        return completeHamming(s)
+    if k == 0: return s
+    if(len(s) == k): return completeHamming(s)
     else:
         # Only first char has to be checked and changed.
         if s[0] != 'a':
-            return('a'+convertHamming(s[1:],k-1)) # Do the conversion
+            return('a'+convertHamming(s[1:],k-1)) # Do the conversion, reduce the 
         else:
             return('a'+ convertHamming(s[1:],k)) # No conversion done
 
